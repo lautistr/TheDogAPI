@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doggies</title>
+</head>
+<body>
+    <h1>DoggiesLand</h1> 
+    <span id="error"></span>   
+    <section>
+        <h2>Random Doggies</h2>
+        <article>
+            <img id="randomDoggieImage" width="250" alt="Something">
+            <button id="saveFavoriteDoggieButton">
+                Save it as favorite
+            </button>
+        </article>        
+        <button id="randomDoggieButton">Get your doggie!</button>    
+    </section>
+    <section id="upload">
+        <h2>Upload your own doggie picture!</h2>
+        <form id="uploadForm">
+            <label for="file">
+                Pick your picture
+            </label>
+            <input
+                type="file"
+                id="file"
+                name="file"
+                onchange="previewDoggie()"
+            />
+            <img id="preview">
+            <button
+                id="submitDoggie"
+                type="button"
+                onclick="uploadDoggiePic()"
+            >
+                Upload it
+            </button>
+        </form>
+    </section>
+    <section id="favorites">
+        <h2>Favorite doggies</h2>
+    </section>
+
+    <script src="./main.js"></script>
+</body>
+</html>
